@@ -19,6 +19,7 @@ const eslintConfig = tseslint.config(
     ],
     rules: {
       "@typescript-eslint/array-type": "off",
+      "@typescript-eslint/consistent-type-definitions": "off",
     },
   },
   {
