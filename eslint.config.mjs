@@ -17,6 +17,9 @@ const eslintConfig = tseslint.config(
       ...tseslint.configs.recommendedTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
     ],
+    rules: {
+      "@typescript-eslint/array-type": "off",
+    },
   },
   {
     languageOptions: {
