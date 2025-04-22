@@ -13,7 +13,14 @@ const compat = new FlatCompat({
 const eslintConfig = tseslint.config(
   ...compat.extends("next/core-web-vitals"),
   {
-    extends: [...tseslint.configs.recommended],
+    extends: [...tseslint.configs.recommendedTypeChecked],
+  },
+  {
+    languageOptions: {
+      parserOptions: {
+        project: true,
+      },
+    },
   },
   {
     ignores: ["**/.next/**", "**/node_modules/**"],
