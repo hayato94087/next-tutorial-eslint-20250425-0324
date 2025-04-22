@@ -1,8 +1,9 @@
 import "@/styles/globals.css";
 import { type FC } from "react";
-type RootLayoutProps = {
+
+interface RootLayoutProps {
   children: React.ReactNode;
-};
+}
 
 export const metadata = {
   title: "Sample",
