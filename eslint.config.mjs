@@ -29,6 +29,10 @@ const eslintConfig = tseslint.config(
         "warn",
         { argsIgnorePattern: "^_" },
       ],
+      "@typescript-eslint/no-misused-promises": [
+        "error",
+        { checksVoidReturn: { attributes: false } },
+      ],
     },
   },
   {
