@@ -23,6 +23,9 @@ importers:
       "@next/eslint-plugin-next":
         specifier: ^15.3.1
         version: 15.3.1
+      "@types/eslint-plugin-security":
+        specifier: ^3.0.0
+        version: 3.0.0
       "@types/node":
         specifier: ^20
         version: 20.17.30
@@ -47,6 +50,9 @@ importers:
       eslint-plugin-react-hooks:
         specifier: ^5.2.0
         version: 5.2.0(eslint@9.25.1(jiti@1.21.7))
+      eslint-plugin-security:
+        specifier: ^3.0.1
+        version: 3.0.1
       eslint-plugin-unicorn:
         specifier: ^58.0.0
         version: 58.0.0(eslint@9.25.1(jiti@1.21.7))
@@ -579,6 +585,18 @@ packages:
     resolution:
       {
         integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==,
+      }
+
+  "@types/eslint-plugin-security@3.0.0":
+    resolution:
+      {
+        integrity: sha512-CpJ7dhqhfURdYHAlaQM4vfl75lDYnGl5+EZKoO/fW0hEREZa9+EBn1g10XLDM6n5yJSuTAPn5afkM4vNzhlyFQ==,
+      }
+
+  "@types/eslint@9.6.1":
+    resolution:
+      {
+        integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==,
       }
 
   "@types/estree@1.0.7":
@@ -1564,6 +1582,13 @@ packages:
     engines: { node: ">=4" }
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
+
+  eslint-plugin-security@3.0.1:
+    resolution:
+      {
+        integrity: sha512-XjVGBhtDZJfyuhIxnQ/WMm385RbX3DBu7H1J7HNNhmB2tnGxMeqVSnYv79oAj992ayvIBZghsymwkYFS6cGH4Q==,
+      }
+    engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
 
   eslint-plugin-unicorn@58.0.0:
     resolution:
@@ -3102,6 +3127,12 @@ packages:
       }
     engines: { node: ">= 0.4" }
 
+  safe-regex@2.1.1:
+    resolution:
+      {
+        integrity: sha512-rx+x8AMzKb5Q5lQ95Zoi6ZbJqwCLkqi3XuJXp5P3rT8OEc6sZCJG5AE5dU3lsgRr/F4Bs31jSlVN+j5KrsGu9A==,
+      }
+
   scheduler@0.26.0:
     resolution:
       {
@@ -3925,6 +3956,15 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
+  "@types/eslint-plugin-security@3.0.0":
+    dependencies:
+      "@types/eslint": 9.6.1
+
+  "@types/eslint@9.6.1":
+    dependencies:
+      "@types/estree": 1.0.7
+      "@types/json-schema": 7.0.15
+
   "@types/estree@1.0.7": {}
 
   "@types/json-schema@7.0.15": {}
@@ -4634,6 +4674,10 @@ snapshots:
       semver: 6.3.1
       string.prototype.matchall: 4.0.12
       string.prototype.repeat: 1.0.0
+
+  eslint-plugin-security@3.0.1:
+    dependencies:
+      safe-regex: 2.1.1
 
   eslint-plugin-unicorn@58.0.0(eslint@9.25.1(jiti@1.21.7)):
     dependencies:
@@ -5539,6 +5583,10 @@ snapshots:
       call-bound: 1.0.4
       es-errors: 1.3.0
       is-regex: 1.2.1
+
+  safe-regex@2.1.1:
+    dependencies:
+      regexp-tree: 0.1.27
 
   scheduler@0.26.0: {}
 

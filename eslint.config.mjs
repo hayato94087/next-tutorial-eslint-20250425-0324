@@ -1,6 +1,7 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 import perfectionist from "eslint-plugin-perfectionist";
+import securityPlugin from "eslint-plugin-security";
 import unicornPlugin from "eslint-plugin-unicorn";
 import unusedImports from "eslint-plugin-unused-imports";
 import path from "node:path";
@@ -65,6 +66,9 @@ const eslintConfig = tseslint.config(
         },
       ],
     },
+  },
+  {
+    extends: [securityPlugin.configs.recommended],
   },
   eslintConfigPrettier,
   {
