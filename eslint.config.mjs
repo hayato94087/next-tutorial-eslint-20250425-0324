@@ -24,7 +24,7 @@ const eslintConfig = tseslint.config(
     ],
     rules: {
       "@typescript-eslint/array-type": "off",
-      "@typescript-eslint/consistent-type-definitions": "off",
+      "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
       "@typescript-eslint/consistent-type-imports": [
         "warn",
         { fixStyle: "inline-type-imports", prefer: "type-imports" },
