@@ -2,6 +2,7 @@ import { FlatCompat } from "@eslint/eslintrc";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 import perfectionist from "eslint-plugin-perfectionist";
 import unicornPlugin from "eslint-plugin-unicorn";
+import unusedImports from "eslint-plugin-unused-imports";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import tseslint from "typescript-eslint";
@@ -46,6 +47,24 @@ const eslintConfig = tseslint.config(
   },
   {
     extends: [perfectionist.configs["recommended-natural"]],
+  },
+  {
+    plugins: {
+      "unused-imports": unusedImports,
+    },
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "warn",
+        {
+          args: "after-used",
+          argsIgnorePattern: "^_",
+          vars: "all",
+          varsIgnorePattern: "^_",
+        },
+      ],
+    },
   },
   eslintConfigPrettier,
   {
