@@ -70,6 +70,11 @@ const eslintConfig = tseslint.config(
   {
     extends: [securityPlugin.configs.recommended],
   },
+  {
+    rules: {
+      "prefer-template": "error",
+    },
+  },
   eslintConfigPrettier,
   {
     languageOptions: {
