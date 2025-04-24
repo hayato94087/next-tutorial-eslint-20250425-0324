@@ -1,12 +1,12 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { FlatCompat } from "@eslint/eslintrc";
 import tseslint from "typescript-eslint";
 import unicornPlugin from "eslint-plugin-unicorn";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.dirname(__filename);
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
@@ -38,16 +38,9 @@ const eslintConfig = tseslint.config(
     },
   },
   {
-    plugins: {
-      unicorn: unicornPlugin,
-    },
+    extends: [unicornPlugin.configs.recommended],
     rules: {
-      "unicorn/filename-case": [
-        "error",
-        {
-          case: "kebabCase",
-        },
-      ],
+      "unicorn/prevent-abbreviations": "off",
     },
   },
   eslintConfigPrettier,
