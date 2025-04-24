@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import { type FC } from "react";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -10,12 +9,10 @@ export const metadata = {
   title: "Sample",
 };
 
-const RootLayout: FC<RootLayoutProps> = (props) => {
+export default function RootLayout(props: RootLayoutProps) {
   return (
     <html lang="ja">
       <body className="">{props.children}</body>
     </html>
   );
-};
-
-export default RootLayout;
+}

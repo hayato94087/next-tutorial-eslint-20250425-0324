@@ -1,6 +1,4 @@
-import type { FC } from "react";
-
-const Page: FC = () => {
+export default function Page() {
   return (
     <main>
       <div className="flex justify-center items-center h-screen">
@@ -10,6 +8,4 @@ const Page: FC = () => {
       </div>
     </main>
   );
-};
-
-export default Page;
+}

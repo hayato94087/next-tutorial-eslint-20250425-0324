@@ -72,6 +72,7 @@ const eslintConfig = tseslint.config(
   },
   {
     rules: {
+      "func-style": ["error", "declaration", { allowArrowFunctions: false }],
       "prefer-template": "error",
     },
   },
